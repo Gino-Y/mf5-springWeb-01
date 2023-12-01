@@ -6,6 +6,15 @@ public class User {
 
     private Address address;
 
+    public User() {
+    }
+
+    public User(String name, Integer age, Address address) {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
     public Address getAddress() {
         return address;
     }
