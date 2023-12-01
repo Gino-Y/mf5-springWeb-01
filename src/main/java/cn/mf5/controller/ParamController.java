@@ -68,4 +68,13 @@ public class ParamController {
         return "Success!";
     }
 
+    // 路径参数传递
+    // 1、在路径中使用占位符，占位符的名称必须与形参名称一致
+    // 2、使用@PathVariable注解，将占位符中的值赋值给形参
+    @GetMapping("/pathParam/{id}")
+    public String pathParam(@PathVariable("id") Integer id) {
+        System.out.println("用户的id是：" + id);
+        return "Success!";
+    }
+
 }
