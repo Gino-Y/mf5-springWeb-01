@@ -5,6 +5,7 @@ package cn.mf5.controller;
 // 2、编写一个任意的方法，设置访问路径，返回数据
 // 3、在方法上添加@RequestMapping注解，设置访问路径
 
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -13,5 +14,11 @@ public class HelloController {
     @RequestMapping("/hello")
     public String hello() {
         return "Hello Spring Boot!";
+    }
+
+    @PostMapping("/login")
+    public String login(String name, String password) {
+        System.out.println(("用户名：" + name + " 密码：" + password));
+        return "Login Success!";
     }
 }
