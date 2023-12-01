@@ -18,7 +18,8 @@ import java.util.List;
 public class ResponseController {
     @GetMapping("/hello")
     public Result hello() {
-        return Result.success("Hello Spring Boot!");
+
+        return Result.success("Hello Response!");
     }
 
     // 返回一个对象，SpringBoot会自动将对象转换为json格式的字符串
