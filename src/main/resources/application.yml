@@ -1,4 +1,4 @@
 server:
   port: 8282
-  servlet:
-    context-path: /day20
+#  servlet:
+#    context-path: /day20

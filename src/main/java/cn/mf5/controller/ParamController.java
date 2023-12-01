@@ -22,7 +22,8 @@ public class ParamController {
     // @RequestParam("name1") String name表示请求参数name1的值会被封装到name变量中
     // @RequestParam("age1") Integer age表示请求参数age1的值会被封装到age变量中
     @GetMapping("/simpleParam") // @GetMapping注解表示该方法只处理get请求
-    public String simpleParam(@RequestParam("name1") String name, @RequestParam("age1") Integer age) {
+//    public String simpleParam(@RequestParam("name1") String name, @RequestParam("age1") Integer age) {
+    public String simpleParam(String name, Integer age) {
         System.out.println(("姓名：" + name + " 年龄：" + age));
         return "Success!";
     }
@@ -54,9 +55,9 @@ public class ParamController {
     // 处理请求参数是日期类型的情况
     // 1、使用@DateTimeFormat注解，指定日期格式
     // 2、使用LocalDate接收
-    @GetMapping("/birthday")
-    public String birthDay(@DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate birthday) {
-        System.out.println("老钟的生日是：" + birthday);
+    @GetMapping("/birthDay")
+    public String birthDay(@DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate birthDay) {
+        System.out.println("老钟的生日是：" + birthDay);
         return "Success!";
     }
 
